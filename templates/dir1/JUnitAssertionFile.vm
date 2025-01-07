@@ -1,0 +1,38 @@
+* List
+[
+  1 : a
+  2 : b
+  3 : c
+]
+
+* Object List
+field1 : value_1_1
+field2 : value_1_2
+field1 : value_2_1
+field2 : value_2_2
+
+* Declaration
+innerValue : INNER_VALUE1
+
+* Condition
+TYPE2
+
+* CSV
+[a,b,c]
+[
+  a,
+  b,
+  c
+]
+
+* parse
+SUB_BEGIN
+This is sub.
+SUB_END
+
+* parse (one-liner)
+SUB_BEGIN This is one-liner. SUB_END
+SUB_BEGIN This is one-liner. SUB_END (this sentence is the same as above)
+SUB_BEGIN
+This is one-liner.
+SUB_END

@@ -1,0 +1,48 @@
+* List
+[
+#foreach($element in $list)
+  $velocityCount : $element
+#end
+]
+
+* Object List
+#foreach($obj in $objList)
+field1 : ${obj.field1}
+field2 : ${obj.field2}
+#end
+
+* Declaration
+#set($innerValue = "INNER_VALUE1")
+innerValue : $innerValue
+
+* Condition
+#set($type = "TYPE2")
+#if($type == "TYPE1")
+TYPE1
+#elseif($type == "TYPE2")
+TYPE2
+#else
+TYPE3
+#end
+
+* CSV
+[#foreach($element in $list)#if($velocityCount != 1),#end$element#end]
+[#foreach($element in $list)#if($velocityCount != 1),#end
+
+  $element#end
+
+]
+
+* parse
+SUB_BEGIN
+#parse("dir1/sub.vm")
+SUB_END
+
+* parse (one-liner)
+SUB_BEGIN #parse("dir1/sub_one-liner.vm") SUB_END
+SUB_BEGIN #parse("dir1/sub_one-liner.vm")
+ SUB_END (this sentence is the same as above)
+SUB_BEGIN
+#parse("dir1/sub_one-liner.vm")
+
+SUB_END
